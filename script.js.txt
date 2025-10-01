@@ -1,0 +1,22 @@
+let balance = 1000;
+
+function makeBet(team, coef) {
+  const bet = prompt("Введите сумму ставки:");
+  const betAmount = parseInt(bet);
+
+  if (isNaN(betAmount) || betAmount <= 0) {
+    alert("Некорректная сумма!");
+    return;
+  }
+
+  if (betAmount > balance) {
+    alert("Недостаточно токенов!");
+    return;
+  }
+
+  balance -= betAmount;
+  document.getElementById("balance").innerText = balance;
+
+  const log = document.getElementById("log");
+  log.innerHTML += `<p>Ставка ${betAmount} токенов на "${team}" (коэф: ${coef})</p>`;
+}

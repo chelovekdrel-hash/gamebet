@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameBet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>GameBet</h1>
+  <div class="balance">Баланс: <span id="balance">1000</span> токенов</div>
+</header>
+
+<main>
+  <section class="event">
+    <h2>Кто победит в матче?</h2>
+    <p>Выберите вариант и сделайте ставку:</p>
+    <div class="options">
+      <div class="option">
+        <h3>Команда А</h3>
+        <p>Коэф: <span>1.5</span></p>
+        <button onclick="makeBet('Команда А', 1.5)">Поставить</button>
+      </div>
+      <div class="option">
+        <h3>Команда Б</h3>
+        <p>Коэф: <span>2.2</span></p>
+        <button onclick="makeBet('Команда Б', 2.2)">Поставить</button>
+      </div>
+    </div>
+    <div class="log" id="log"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
